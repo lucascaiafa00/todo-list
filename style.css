@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: sans-serif;
+    transition: all .2s ease;
+}
+
+main{
+    width: 100%;
+    height: 100vh;
+    background-color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height: 70vh;
+    background-color: #fff;
+    border-radius: 20px 20px 0 0;
+}
+
+h1{
+    background-color: #8e57ff;
+    color: #f2f2f2;
+    padding: 15px;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+#add-todo{
+    display: flex;
+    height: 25px;
+    position: relative;
+    top: -15px;
+    box-shadow: #00000078 0 0 5px;
+    border-radius: 20px;
+}
+
+#add-todo-input{
+    border: none;
+    width: 220px;
+    padding: 0 5px;
+    border-radius: 20px 0 0 20px;
+}
+
+#add-todo-button{
+    width: 30px;
+    border: none;
+    background-color: #8e57ff;
+    cursor: pointer;
+    position: relative;
+    border-radius: 0 20px 20px 0;
+}
+
+#add-todo-button:hover{
+    filter: brightness(90%);
+}
+
+#add-todo-button::after, #add-todo-button::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 4px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+#add-todo-button::after{
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+#todo-list{
+    background-color: #fefefe;
+    width: 95%;
+    height: 75%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#todo-list li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    word-wrap: break-word;
+    padding: 5px;
+    border: solid #cccccc 1px;
+    border-left: 0;
+    border-right: 0;
+    font-size: 14px;
+}
+
+li img{
+    position: relative;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+li img:hover{
+    transform: scale(1.1);
+}
+
+li label{
+    width: 220px;
+    padding: 0 5px;
+    color: #000;
+    cursor: pointer;
+}
+
+#checkbox{
+    cursor: pointer;
+}
+
+#checkbox:checked + label{
+    text-decoration: line-through 2px;
+    text-decoration-color: #8e57ff;
+    color: #b4b4b4;
+}
+
+#clear-all{
+    border: none;
+    background: none;
+    color: #ff3f5b;
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+#clear-all:hover{
+    letter-spacing: 4px;
+}
