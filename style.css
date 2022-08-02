@@ -117,11 +117,11 @@ li label{
     cursor: pointer;
 }
 
-#checkbox{
+input[type=checkbox]{
     cursor: pointer;
 }
 
-#checkbox:checked + label{
+input[type=checkbox]:checked + label{
     text-decoration: line-through 2px;
     text-decoration-color: #8e57ff;
     color: #b4b4b4;
